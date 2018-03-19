@@ -1,12 +1,12 @@
 {
   "name": "ngw",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "Provides an opportunity to overload webpack config for angular-cli applications",
   "main": "lib/index.js",
   "typings": "lib/index",
   "scripts": {
     "lint": "tslint -c tslint.json 'src/**/*.ts'",
-    "test": "echo test",
+    "test": "./test.sh",
     "coverage": "echo coverage",
     "build": "tsc",
     "publish": "tsc"
