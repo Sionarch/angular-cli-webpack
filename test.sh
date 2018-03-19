@@ -5,12 +5,12 @@
 . ~/.bashrc
 
 set -e
-
 cp -r "$PWD" "../ngw"
 cd "../"
 ng new test-project --skip-install
 cd test-project
 npm i
 cp -r "../ngw" "./node_modules/ngw"
-./node_modules/ngw/bin/ngw --set-up
+ln -sr "./node_modules/ngw/bin/ngw" "./node_modules/.bin/ngw"
+./node_modules/.bin/ngw --set-up
 npm run build
