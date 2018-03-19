@@ -18,7 +18,7 @@ script:
   - cd test-project
   - npm i
   - cp -r "../ngw" "./node_modules/ngw"
-  - ln "./node_modules/ngw/bin/ngw" "./node_modules/.bin/ngw"
+  - ln -s "./node_modules/ngw/bin/ngw" "./node_modules/.bin/ngw"
   - ./node_modules/.bin/ngw --set-up
   - npm run build
 after_success:
