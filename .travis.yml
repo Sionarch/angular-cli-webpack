@@ -9,5 +9,15 @@ install:
   - npm install
 before_script:
   - npm install -g @angular/cli
+script:
+  - set -e
+  - cp -r "$PWD" "../ngw"
+  - cd "../"
+  - ng new test-project --skip-install
+  - cd test-project
+  - npm i
+  - cp -r "../ngw" "./node_modules/ngw"
+  - ngw --set-up
+  - npm run build
 after_success:
   - npm run coverage
